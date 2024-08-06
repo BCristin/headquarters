@@ -1,0 +1,87 @@
+@mixin button-status($base-color) {
+	background-color: var(--#{$base-color}-normal);
+	&.position-secondary {
+		background: var(--#{$base-color}-position-secondary);
+		color: var(--#{$base-color}-text);
+		border: none;
+
+		&:hover {
+			background: var(--#{$base-color}-position-secondary-hover);
+			box-shadow: none;
+			border: none;
+		}
+		&.disabled {
+			background: var(--#{$base-color}-position-secondary);
+			color: var(--#{$base-color}-position-secondary-text);
+			cursor: not-allowed;
+		}
+	}
+	&:hover {
+		background-color: var(--#{$base-color}-hover);
+		box-shadow: 0px 6px 20px 0px var(--#{$base-color}-shadow);
+		border: none;
+	}
+	&.disabled {
+		background: var(--#{$base-color}-disabled);
+		cursor: not-allowed;
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+.button {
+	display: inline-flex;
+
+	justify-content: center;
+	align-items: center;
+	gap: var(--12, 12px);
+
+	border-radius: 5px;
+
+	color: var(--Gray-White, #fff);
+
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: capitalize;
+	border: none;
+}
+
+.small {
+	padding: 0px var(--16, 16px);
+	font-size: 14px;
+	line-height: 40px; /* 285.714% */
+	letter-spacing: -0.056px;
+}
+.medium {
+	padding: 0px var(--24, 24px);
+	font-size: 16px;
+	line-height: 48px; /* 300% */
+	letter-spacing: -0.128px;
+}
+.large {
+	padding: 0px 32px;
+	font-size: 18px;
+	line-height: 56px; /* 311.111% */
+	letter-spacing: -0.18px;
+}
+
+.color-primary {
+	@include button-status('Primary');
+}
+.color-secondary {
+	@include button-status('Secondary');
+}
+.color-gray {
+	@include button-status('Gray');
+}
+.color-success {
+	@include button-status('Success');
+}
+.color-warning {
+	@include button-status('Warning');
+}
+.color-error {
+	@include button-status('Error');
+}

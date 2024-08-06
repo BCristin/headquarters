@@ -1,68 +1,172 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	/* Valorile din figma cu denumirea din figma */
+	--Color2: #ff8749;
+	--Acc1: #3399f7;
+	--Blue: #2f80ed;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	--Error-100: #fff0f0;
+	--Error-200: #f4c8c8;
+	--Error-300: #ee8f8f;
+	--Error-500: #e34444;
+	--Error-600: #b63636;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	--Gray: #4f4f4f;
+	--Gray-50: #f5f7fa;
+	--Gray-100: #e9eaf0;
+	--Gray-200: #ced1d9;
+	--Gray-300: #b7bac7;
+	--Gray-700: #4e5566;
+	--Gray-800: #363b47;
+	--Gray-900: #1d2026;
+	--Gray-White: #ffffff;
+
+	--Primary-100: #ffeee8;
+	--Primary-200: #ffddd1;
+	--Primary-300: #ffa386;
+	--Primary-500: #ff6636;
+	--Primary-600: #cc522b;
+
+	--Secondary-100: #ebebff;
+	--Secondary-200: #cdcbfe;
+	--Secondary-300: #9a95fe;
+	--Secondary-500: #564ffd;
+	--Secondary-600: #453fca;
+
+	--Success-100: #e1f7e3;
+	--Success-200: #c3e5c6;
+	--Success-300: #7bd785;
+	--Success-500: #23bd33;
+	--Success-600: #1c9729;
+
+	--Warning-100: #fff2e5;
+	--Warning-200: #fed1a5;
+	--Warning-300: #febb79;
+	--Warning-500: #fd8e1f;
+	--Warning-600: #cc7319;
+
+	/** Variabile folosite in app */
+
+	--Error-position-secondary: var(--Error-100);
+	--Error-disabled: var(--Error-200);
+	--Error-normal: var(--Error-500);
+	--Error-text: var(--Error-500);
+	--Error-hover: var(--Error-600);
+
+	--Gray-position-secondary: var(--Gray-50);
+	--Gray-disabled: var(--Gray-200);
+	--Gray-hover: var(--Gray-800);
+	--Gray-normal: var(--Gray-900);
+	--Gray-text: var(--Gray-900);
+
+	--Primary-hover: var(--Color2);
+	--Primary-normal: var(--Acc1);
+	--Primary-position-secondary: var(--Primary-100);
+	--Primary-disabled: var(--Primary-300);
+	--Primary-text: var(--Primary-500);
+
+	--Secondary-position-secondary: var(--Secondary-100);
+	--Secondary-disabled: var(--Secondary-200);
+	--Secondary-normal: var(--Secondary-500);
+	--Secondary-text: var(--Secondary-500);
+	--Secondary-hover: var(--Secondary-600);
+
+	--Success-position-secondary: var(--Success-100);
+	--Success-disabled: var(--Success-200);
+	--Success-normal: var(--Success-500);
+	--Success-text: var(--Success-500);
+	--Success-hover: var(--Success-600);
+
+	--Warning-position-secondary: var(--Warning-100);
+	--Warning-disabled: var(--Warning-200);
+	--Warning-normal: var(--Warning-500);
+	--Warning-text: var(--Warning-500);
+
+	--Warning-position-secondary-hover: var(--Warning-200);
+	--Primary-position-secondary-hover: var(--Primary-200);
+	--Error-position-secondary-hover: var(--Error-200);
+	--Gray-position-secondary-hover: var(--Gray-100);
+	--Secondary-position-secondary-hover: var(--Secondary-200);
+	--Success-position-secondary-hover: var(--Success-200);
+
+	--Primary-position-secondary-text: var(--Primary-300);
+	--Secondary-position-secondary-text: var(--Secondary-300);
+	--Gray-position-secondary-text: var(--Gray-300);
+	--Success-position-secondary-text: var(--Success-300);
+	--Warning-position-secondary-text: var(--Warning-300);
+	--Error-position-secondary-text: var(--Error-300);
+
+	--Warning-hover: #cc7319;
+	--Primary-shadow: rgba(204, 82, 43, 0.5);
+	--Gray-shadow: rgba(54, 59, 71, 0.5);
+	--Error-shadow: rgba(182, 54, 54, 0.5);
+	--Secondary-shadow: rgba(69, 63, 202, 0.5);
+	--Success-shadow: rgba(28, 151, 41, 0.5);
+	--Warning-shadow: rgba(204, 156, 25, 0.5);
+
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: Grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+	color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+	border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
 }
